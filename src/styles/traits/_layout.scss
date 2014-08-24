@@ -1,0 +1,88 @@
+$attr: "layout";
+
+@include val("block") {
+  display: block;
+}
+
+$sizes: 0, 0.2, 0.5, 1, 2, 3, 4;
+@each $i in $sizes {
+  @include val("p#{$i}") {
+    padding: $i * 1rem;
+  }
+
+  @include val("pt#{$i}") {
+    padding-top: $i * 1rem;
+  }
+
+  @include val("pr#{$i}") {
+    padding-right: $i * 1rem;
+  }
+
+  @include val("pb#{$i}") {
+    padding-bottom: $i * 1rem;
+  }
+
+  @include val("pl#{$i}") {
+    padding-left: $i * 1rem;
+  }
+
+  @each $j in $sizes {
+    @include val("p#{$i}-#{$j}") {
+      padding: $i * 1rem $j * 1rem;
+    }
+  }
+
+  @include val("m#{$i}") {
+    margin: $i * 1rem;
+  }
+
+  @include val("mt#{$i}") {
+    margin-top: $i * 1rem;
+  }
+
+  @include val("mr#{$i}") {
+    margin-right: $i * 1rem;
+  }
+
+  @include val("mb#{$i}") {
+    margin-bottom: $i * 1rem;
+  }
+
+  @include val("ml#{$i}") {
+    margin-left: $i * 1rem;
+  }
+
+  @each $j in $sizes {
+    @include val("m#{$i}-#{$j}") {
+      margin: $i * 1rem $j * 1rem;
+    }
+  }
+
+  @include val("m#{$i}-auto") {
+    margin: $i * 1rem auto;
+  }
+}
+
+@include val("w100%") {
+  width: 100%;
+}
+
+@include val("mw100%") {
+  max-width: 100%;
+}
+
+@include val("intrinsic-width") {
+  width: intrinsic;
+}
+
+$widths: 480, 600, 720, 840, 960;
+@each $i in $widths {
+  @include val("max#{$i}") {
+    @extend [ _layout ~= "m0-auto" ];
+    max-width: 1px * $i;
+  }
+}
+
+@include val("intrinsic-width") {
+  width: intrinsic;
+}

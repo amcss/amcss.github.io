@@ -1,0 +1,136 @@
+/*
+  FONT FAMILIES
+*/
+
+$attr: "type";
+
+@include val("sans") {
+  font-family: 'Avenir Next', 'Helvetica Neue', 'Open Sans', 'Fira Sans';
+}
+
+@include val("serif") {
+  font-family:  Palatino, Georgia, "Times New Roman", Times, serif;
+}
+
+@include val("mono") {
+  font-family: "Consolas", "Menlo", "Courier", monospace;
+}
+
+/*
+  FONT WEIGHTS
+*/
+
+@include val("light") {
+  font-weight: 300;
+}
+
+@include val("normal") {
+  font-weight: 400;
+}
+
+@include val("medium") {
+  font-weight: 500;
+}
+
+@include val("semibold") {
+  font-weight: 600;
+}
+
+@include val("bold") {
+  font-weight: 700;
+}
+
+@include val("black") {
+  font-weight: 900;
+}
+
+/*
+  HEADERS
+*/
+
+@include val("h1") {
+  font-size: 4.5rem;
+}
+
+@include val("h2") {
+  font-size: 3.5rem;
+}
+
+@include val("h3") {
+  font-size: 2.5rem;
+}
+
+@include val("h4") {
+  font-size: 1.5rem;
+}
+
+@include val("h5") {
+  font-size: 1.2rem;
+}
+
+/*
+  SMALL TYPE
+*/
+
+@include val("small0") {
+  font-size: 1.0rem;
+}
+
+@include val("small1") {
+  font-size: 0.9rem;
+}
+
+@include val("small2") {
+  font-size: 0.8rem;
+}
+
+@include val("small3") {
+  font-size: 0.7rem;
+}
+
+@include val("small4") {
+  font-size: 0.6rem;
+}
+
+
+/*
+  LINE-HEIGHT
+*/
+
+@for $i from 0 through 8 {
+  @include val("lh1.#{$i}") {
+    line-height: 1 + 0.1 * $i;
+  }
+}
+
+/*
+  TRANSFORMATIONS
+*/
+
+@include val("upcase") {
+  text-transform: uppercase;
+}
+
+@include val("center") {
+  text-align: center;
+}
+
+@include val("italic") {
+  font-style: italic;
+}
+
+@include val("truncate") {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+}
+
+@include val("right") {
+  text-align: right;
+}
+
+@include val("unbroken") {
+  white-space: pre;
+}
