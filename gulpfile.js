@@ -1,10 +1,8 @@
 var gulp        = require('gulp');
-var awspublish  = require('gulp-awspublish');
-var rename      = require('gulp-rename');
+var ghPages     = require('gulp-gh-pages');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var harp        = require('harp');
-var es          = require('event-stream');
 
 /**
  * Serve the Harp Site from the src directory
@@ -47,34 +45,9 @@ gulp.task('build-release', function (done) {
   harp.compile('src', __dirname + '/dist', done);
 });
 gulp.task('publish', ['build-release'], function () {
-  var aws = require('./.aws.json'),
-    publisher = awspublish.create(aws);
-
-  var html = gulp.src("dist/**/*.html")
-    .pipe(rename(function (path) {
-      // Drop the HTML
-      path.extname = '';
-      // Rename subdir/index to just subdir
-      if (path.basename === 'index' && path.dirname != '.') {
-        path.basename = path.dirname;
-        path.dirname = '.';
-      }
+  return gulp.src("./dist/**/*")
+    .pipe(ghPages({
+      branch: "master",
+      cacheDir: ".publish"
     }))
-    .pipe(awspublish.gzip())
-    .pipe(publisher.publish({
-      'Cache-Control': 'max-age=86400, no-transform, public',
-      'Content-Type': 'text/html'
-    }));
-
-  var assets =  gulp.src(["dist/**", "!dist/**/*.html"])
-    .pipe(awspublish.gzip())
-    .pipe(publisher.publish({
-      'Cache-Control': 'max-age=86400, no-transform, public'
-    }));
-
-  return es.merge(html, assets)
-    .pipe(publisher.cache())
-    .pipe(awspublish.reporter({
-      states: ['create', 'update', 'delete']
-    }));
 });
