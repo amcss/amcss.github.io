@@ -1,4 +1,4 @@
-doctype
+doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
@@ -7,10 +7,9 @@ html(lang="en")
     meta(name="breakpoint" content="small" media="(max-width: 520px)")
     meta(name="breakpoint" content="medium" media="(min-width: 521px) and (max-width: 900px)")
     meta(name="breakpoint" content="large" media="(min-width: 901px)")
-    script.
-      include scripts/vendor/_metaquery.min.js
-    link(rel="stylesheet" href="/main.css")
-  body(_layout='p1 small:p0')
+    include scripts/vendor/_metaquery.min.js
+    link(rel="stylesheet" href="/styles/main.css")
+  body(am-layout='p1 small:p0')
     //!= partial("_shared/nav")
     != yield
     //!= partial("_shared/footer")

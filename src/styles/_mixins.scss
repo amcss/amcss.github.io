@@ -1,0 +1,22 @@
+@mixin attr() {
+  [#{$prefix}#{$attr}] {
+    @content;
+  }
+}
+@mixin val($value) {
+  [#{$prefix}#{$attr}~="#{$value}"] {
+    @content;
+  }
+
+  @each $bp in $breakpoints {
+    .breakpoint-#{$bp} [#{$prefix}#{$attr}~="#{$bp}:#{$value}"] {
+      @extend [#{$prefix}#{$attr}~="#{$value}"];
+    }
+  }
+}
+@mixin extend($attr, $values...) {
+  @extend [#{$prefix}#{$attr}];
+  @each $value in $values {
+    @extend [#{$prefix}#{$attr}~="#{$value}"];
+  }
+}

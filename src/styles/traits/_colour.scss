@@ -1,0 +1,11 @@
+$attr: "color";
+
+$white: hsl(60, 40%, 99%);
+@include val("white") {
+  color: $white;
+}
+
+$black: #111;
+@include val("black") {
+  color: $black;
+}

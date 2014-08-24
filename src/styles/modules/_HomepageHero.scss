@@ -1,0 +1,8 @@
+[am-HomepageHero] {
+  @include extend("layout", "p4");
+  @include extend("type", "center");
+
+  span {
+    @include extend("layout", "block", "m1-0");
+  }
+}

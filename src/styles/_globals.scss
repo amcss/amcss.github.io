@@ -1,0 +1,12 @@
+:root {
+  font-size: 16px;
+  min-height: 100%;
+  @include extend("type", "sans", "normal");
+}
+
+body {
+  min-height: 100%;
+  text-rendering: optimizeLegibility;
+  @include extend("background", "white");
+  @include extend("color", "black");
+}

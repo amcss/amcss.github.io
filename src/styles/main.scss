@@ -1,1 +1,24 @@
-@import "vendor/reset.min";
+/* Reset */
+@import "reset";
+
+/* Set up AM mixins */
+$breakpoints: "small", "medium", "large";
+$prefix: "am-";
+@import 'mixins';
+
+/* Declare traits */
+@import 'traits/colour';
+@import 'traits/layout';
+@import 'traits/flex';
+@import 'traits/type';
+@import 'traits/link';
+@import 'traits/after';
+@import 'traits/border';
+@import 'traits/background';
+@import 'traits/size';
+
+/* Assemble Modules */
+@import 'modules/HomepageHero';
+
+/* Add global styles */
+@import 'globals';
