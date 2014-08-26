@@ -61,10 +61,14 @@ $attr: "type";
 }
 
 @include val("h4") {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 @include val("h5") {
+  font-size: 1.5rem;
+}
+
+@include val("h6") {
   font-size: 1.2rem;
 }
 

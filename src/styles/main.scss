@@ -7,7 +7,7 @@ $prefix: "am-";
 @import 'mixins';
 
 /* Declare traits */
-@import 'traits/colour';
+@import 'traits/color';
 @import 'traits/layout';
 @import 'traits/flex';
 @import 'traits/type';
@@ -19,6 +19,7 @@ $prefix: "am-";
 
 /* Assemble Modules */
 @import 'modules/HomepageHero';
+@import 'modules/Example';
 
 /* Add global styles */
 @import 'globals';

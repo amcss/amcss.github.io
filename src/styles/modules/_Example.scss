@@ -1,0 +1,13 @@
+[am-Example] {
+  @include extend("layout", "max720", "m2-auto", "p1-0");
+
+  > h2 {
+    @include extend("layout", "m2-0");
+    @include extend("type", "h4", "bold", "center");
+  }
+
+  > p {
+    @include extend("layout", "m1-0");
+    @include extend("type", "h6", "lh1.4");
+  }
+}

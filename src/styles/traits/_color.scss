@@ -9,3 +9,13 @@ $black: #111;
 @include val("black") {
   color: $black;
 }
+
+$blue: #00436e;
+@include val("blue") {
+  color: $blue;
+}
+
+$red: #f4454a;
+@include val("red") {
+  color: $red;
+}
