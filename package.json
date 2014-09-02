@@ -21,5 +21,8 @@
     "browser-sync": "~1.3.6",
     "harp": "~0.13.0",
     "gulp-gh-pages": "~0.3.3"
+  },
+  "dependencies": {
+    "metaquery": "~1.2.5"
   }
 }
