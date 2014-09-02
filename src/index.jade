@@ -46,6 +46,13 @@ main
       = '>Extra-small danger button</a>'
 
   section(am-Example)
+    h3
+      span(am-type="bold") Example:
+      |  Flexbox Grid
+    :markdown
+      Using a grid system is commonplace and Flexbox Grid is one we're particularly fond of, but it shares some problems with all class-based grid systems. Because grid classes are used so frequently, it uses relatively *bare* css classes like `row` & `reverse`, but because columns need to be responsive, it eschews a global `col` class and instead defines `col-breakpoint-number` classes.
+
+      Converting this to AM-style, on the other hand, we can use an `am-Row` and `am-Column` module, and since each of those define a namespace, we can be free to use values of our choosing. It's also simple to use characters that normally wouldn't suit classes, so we can use a `breakpoint:number` syntax, which is arguably easier to understand at a glance.
     pre: code
       = '<div '
       span(am-Code='removed')= 'class="row"'
@@ -54,7 +61,7 @@ main
       = '>\n  <div '
       span(am-Code='removed')= 'class="col-xs-12 col-sm-8"'
       = ' '
-      span(am-Code='added')= 'am-Col="xs:12 sm:8"'
+      span(am-Code='added')= 'am-Column="xs:12 sm:8"'
       = '\n    <div '
       span(am-Code='removed')= 'class="box"'
       = ' '
