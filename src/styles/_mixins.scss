@@ -34,7 +34,7 @@ $attr: false;
   $attr: false;
 }
 
-@mixin extend($attr, $value: "") {
+@mixin trait($attr, $value: "") {
   @extend [#{$prefix}#{$attr}];
   $string: $value;
   $continue: true;

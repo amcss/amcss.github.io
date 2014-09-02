@@ -1,0 +1,14 @@
+[am-Diff] {
+  padding: 2px;
+  border-radius: 2px;
+}
+
+[am-Diff~="-"] {
+  color: rgba($red, 0.4);
+  background: rgba($red, 0.2);
+}
+
+[am-Diff~="+"] {
+  color: rgba($green, 0.8);
+  background: rgba($green, 0.2);
+}

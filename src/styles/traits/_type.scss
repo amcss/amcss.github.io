@@ -47,6 +47,10 @@
     HEADERS
   */
 
+  @include val("h0") {
+    font-size: 6rem;
+  }
+
   @include val("h1") {
     font-size: 4.5rem;
   }
@@ -95,7 +99,7 @@
     LINE-HEIGHT
   */
 
-  @each $i in 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6 {
+  @each $i in 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.8 {
     @include val("lh#{$i}") {
       line-height: $i;
     }

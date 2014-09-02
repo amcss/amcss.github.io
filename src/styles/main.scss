@@ -20,6 +20,7 @@ $prefix: "am-";
 /* Assemble Modules */
 @import 'modules/HomepageHero';
 @import 'modules/Example';
+@import 'modules/Diff';
 
 /* Add global styles */
 @import 'globals';

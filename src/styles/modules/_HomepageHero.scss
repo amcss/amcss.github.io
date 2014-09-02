@@ -1,6 +1,6 @@
 [am-HomepageHero] {
-  @include extend("layout", "p4");
-  @include extend("type", "center");
-  @include extend("background", "gradient");
-  @include extend("color", "white");
+  @include trait(layout, "p4");
+  @include trait(type, "center");
+  @include trait(background, "gradient");
+  @include trait(color, "white");
 }

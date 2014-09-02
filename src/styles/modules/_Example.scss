@@ -1,26 +1,26 @@
 [am-Example] {
-  @include extend("layout", "max720", "m2-auto", "p1-0");
+  @include trait(layout, "max720 m2-auto p1-0");
 
   > h2 {
-    @include extend("layout", "m2-0");
-    @include extend("type", "h4", "bold", "center");
+    @include trait(layout, "m2-0");
+    @include trait(type, "h4 bold center");
   }
 
   > p {
-    @include extend("layout", "m1-0");
-    @include extend("type", "h6", "lh1.4");
+    @include trait(layout, "m1-0");
+    @include trait(type, "h6 lh1.4");
   }
   pre {
-    @include extend(layout, "max840 m1-auto");
+    @include trait(layout, "max840 m1-auto");
     code {
-      @include extend(type, "small3 lh1.4");
-      @include extend(layout, "p0.5 m0");
+      @include trait(type, "small3 lh1.8");
+      @include trait(layout, "p0.5 m0");
+      @include trait(border, "none");
     }
   }
   code {
-    @include extend(type, "mono lh1.2 small3 unbroken");
-    @include extend(background, "white");
-    @include extend(border, "simple");
-    @include extend(layout, "p0.2 m0.2");
+    @include trait(type, "mono lh1.2 small3 unbroken");
+    @include trait(border, "simple");
+    @include trait(layout, "p0.2 m0.2");
   }
 }

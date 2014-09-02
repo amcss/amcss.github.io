@@ -8,14 +8,19 @@ header(am-HomepageHero)
     |  for CSS
 main
   section(am-Example)
-    :markdown
-      ```markup
-        <div class="row">
-            <div class="col-xs-12
-                        col-sm-8
-                        col-md-6
-                        col-lg-4">
-                <div class="box">Responsive</div>
-            </div>
-        </div>
-      ```
+    pre: code
+      = '<div '
+      span(am-Diff='-')= 'class="row"'
+      = ' '
+      span(am-Diff='+')= 'am-Row'
+      = '>\n    <div '
+      span(am-Diff='-')= 'class="col-xs-12 col-sm-8"'
+      = ' '
+      span(am-Diff='+')= 'am-Col="xs:12 sm:8"'
+      = '\n      <div '
+      span(am-Diff='-')= 'class="box"'
+      = ' '
+      span(am-Diff='+')= 'am-Demo="box"'
+      = '>Responsive</div>'
+      = '\n    </div>'
+      = '\n  </div>'
