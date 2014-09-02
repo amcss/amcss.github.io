@@ -3,8 +3,4 @@
   @include extend("type", "center");
   @include extend("background", "gradient");
   @include extend("color", "white");
-
-  span {
-    @include extend("layout", "block", "m1-0");
-  }
 }

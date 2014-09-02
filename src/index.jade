@@ -1,13 +1,21 @@
 header(am-HomepageHero)
-  h1
-    span(am-type="h1 light") Attribute Modules
-    span(am-type="italic h3 light") for
-    span(am-type="h2 black") CSS
+  h1(am-type="light")
+    span(am-type="h0 middle") [
+    span(am-type="h1 middle") AMCSS
+    span(am-type="h0 middle") ]
+  h2(am-type="h3 light italic" am-layout="pt2")
+    span(am-type="normal") Attribute Modules
+    |  for CSS
 main
   section(am-Example)
-    h2 Syntax
-    p Attribute Modules (AMCSS) syntax consists of three parts. They are:
-    ul
-      li The Prefix
-      li The Module
-      li The Value
+    :markdown
+      ```markup
+        <div class="row">
+            <div class="col-xs-12
+                        col-sm-8
+                        col-md-6
+                        col-lg-4">
+                <div class="box">Responsive</div>
+            </div>
+        </div>
+      ```

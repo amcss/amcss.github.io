@@ -10,4 +10,17 @@
     @include extend("layout", "m1-0");
     @include extend("type", "h6", "lh1.4");
   }
+  pre {
+    @include extend(layout, "max840 m1-auto");
+    code {
+      @include extend(type, "small3 lh1.4");
+      @include extend(layout, "p0.5 m0");
+    }
+  }
+  code {
+    @include extend(type, "mono lh1.2 small3 unbroken");
+    @include extend(background, "white");
+    @include extend(border, "simple");
+    @include extend(layout, "p0.2 m0.2");
+  }
 }
