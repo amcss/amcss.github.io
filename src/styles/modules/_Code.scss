@@ -1,14 +1,18 @@
-[am-Diff] {
+[am-Code] {
   padding: 2px;
   border-radius: 2px;
 }
 
-[am-Diff~="-"] {
+[am-Code~="removed"] {
   color: rgba($red, 0.4);
   background: rgba($red, 0.2);
 }
 
-[am-Diff~="+"] {
+[am-Code~="added"] {
   color: rgba($green, 0.8);
   background: rgba($green, 0.2);
+}
+
+[am-Code~="comment"] {
+  color: $grey--light;
 }

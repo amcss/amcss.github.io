@@ -3,6 +3,8 @@ $black: #111;
 $blue: #00436e;
 $red: #f4454a;
 $green: #2b782b;
+$grey: #575757;
+$grey--light: #a1a1a1;
 
 @include AM("color") {
   @include val("white") {
@@ -20,20 +22,4 @@ $green: #2b782b;
   @include val("red") {
     color: $red;
   }
-}
-
-[grid-Row] {
-
-}
-
-[am-Grid~="row"] {
-
-}
-
-[am-Grid~="col"] {
-
-}
-
-.my-override [am-Grid~="row"] {
-
 }

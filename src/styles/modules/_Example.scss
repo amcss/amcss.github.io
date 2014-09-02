@@ -1,5 +1,5 @@
 [am-Example] {
-  @include trait(layout, "max720 m2-auto p1-0");
+  @include trait(layout, "max720 m2-auto p1-1");
 
   > h2 {
     @include trait(layout, "m2-0");
@@ -16,6 +16,7 @@
       @include trait(type, "small3 lh1.8");
       @include trait(layout, "p0.5 m0");
       @include trait(border, "none");
+      color: $grey;
     }
   }
   code {
