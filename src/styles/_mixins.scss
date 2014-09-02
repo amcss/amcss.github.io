@@ -1,22 +1,53 @@
-@mixin attr() {
-  [#{$prefix}#{$attr}] {
-    @content;
-  }
-}
-@mixin val($value) {
-  [#{$prefix}#{$attr}~="#{$value}"] {
-    @content;
-  }
+$attr: false;
 
-  @each $bp in $breakpoints {
-    .breakpoint-#{$bp} [#{$prefix}#{$attr}~="#{$bp}:#{$value}"] {
-      @extend [#{$prefix}#{$attr}~="#{$value}"];
+@mixin attr() {
+  @if $attr {
+    [#{$prefix}#{$attr}] {
+      @content;
     }
   }
+  @else {
+    @warn "attr() needs to be called within an AM block";
+  }
 }
-@mixin extend($attr, $values...) {
+
+@mixin val($value) {
+  @if $attr {
+    [#{$prefix}#{$attr}~="#{$value}"] {
+      @content;
+    }
+
+    @each $bp in $breakpoints {
+      .breakpoint-#{$bp} [#{$prefix}#{$attr}~="#{$bp}:#{$value}"] {
+        @extend [#{$prefix}#{$attr}~="#{$value}"];
+      }
+    }
+  }
+  @else {
+    @warn "attr() needs to be called within an AM block";
+  }
+}
+
+@mixin AM($local-attr) {
+  $attr: $local-attr;
+  @content;
+  $attr: false;
+}
+
+@mixin extend($attr, $value: "") {
   @extend [#{$prefix}#{$attr}];
-  @each $value in $values {
-    @extend [#{$prefix}#{$attr}~="#{$value}"];
+  $string: $value;
+  $continue: true;
+  @while $continue {
+    $next-space: str-index($string, ' ');
+    @if type-of($next-space) == number {
+      $next-word: str-slice($string, 1, $next-space - 1);
+      $string: str-slice($string, $next-space + 1);
+    }
+    @else {
+      $next-word: $string;
+      $continue: false;
+    }
+    @extend [#{$prefix}#{$attr}~="#{$next-word}"];
   }
 }
