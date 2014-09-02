@@ -1,51 +1,53 @@
-$attr: 'link';
+@include AM('link') {
 
-@include attr {
-  &:hover, &:active, &:visited {
+  @include attr {
+    &:hover, &:active, &:visited {
+      color: inherit;
+    }
+    text-decoration: underline;
+  }
+
+  @include val("subtle") {
     color: inherit;
-  }
-  text-decoration: underline;
-}
-
-@include val("subtle") {
-  color: inherit;
-  text-decoration: none;
-
-  &:hover, &:active {
-    text-decoration: underline;
-  }
-}
-
-@include val("inline") {
-  transition: color 0.1s;
-  &, &:hover, &:visited {
-    color: hsl(0, 50%, 40%);
     text-decoration: none;
-  }
-  &:hover {
-    color: hsl(0, 50%, 50%);
-  }
-  &:active {
-    transition: none;
-    color: hsl(0, 50%, 50%);
-    text-decoration: underline;
-  }
-}
 
-@include val("invisible") {
-  &, &:hover, &:visited {
-    text-decoration: none;
+    &:hover, &:active {
+      text-decoration: underline;
+    }
   }
-}
 
-@include val("obvious") {
-  &::after {
-    content: ' ↵';
+  @include val("inline") {
+    transition: color 0.1s;
+    &, &:hover, &:visited {
+      color: hsl(0, 50%, 40%);
+      text-decoration: none;
+    }
+    &:hover {
+      color: hsl(0, 50%, 50%);
+    }
+    &:active {
+      transition: none;
+      color: hsl(0, 50%, 50%);
+      text-decoration: underline;
+    }
   }
-}
 
-@include val("shadow") {
-  &:hover, &:active {
-    box-shadow: 0 0 20px -3px;
+  @include val("invisible") {
+    &, &:hover, &:visited {
+      text-decoration: none;
+    }
   }
+
+  @include val("obvious") {
+    &::after {
+      content: ' ↵';
+    }
+  }
+
+  @include val("shadow") {
+    &:hover, &:active {
+      box-shadow: 0 0 20px -3px;
+    }
+  }
+
 }

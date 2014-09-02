@@ -1,9 +1,9 @@
-$attr: "background";
+@include AM("background") {
+  @include val("white") {
+    background-color: $white;
+  }
 
-@include val("white") {
-  background-color: $white;
-}
-
-@include val("gradient") {
-  background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
+  @include val("gradient") {
+    background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
+  }
 }

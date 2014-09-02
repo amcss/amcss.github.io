@@ -23,49 +23,51 @@
   opacity: 0.2;
 }
 
-$attr: "after";
-@include attr {
-  &::after {
-    content: '';
+@include AM("after") {
+  @include attr {
+    &::after {
+      content: '';
+    }
+  }
+
+  @include val("down-chevron") {
+    @extend %_after_abs;
+    &::after {
+      top: 100%;
+      left: 50%;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: translateX(-0.5rem) rotate(45deg);
+    }
+  }
+
+  @include val("hr") {
+    &::after {
+      @extend %hr;
+    }
   }
 }
 
-@include val("down-chevron") {
-  @extend %_after_abs;
-  &::after {
-    top: 100%;
-    left: 50%;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid;
-    border-top-color: transparent;
-    border-left-color: transparent;
-    transform: translateX(-0.5rem) rotate(45deg);
+@include AM("before") {
+  @include attr {
+    &::before {
+      content: '';
+    }
   }
-}
 
-@include val("hr") {
-  &::after {
-    @extend %hr;
+  @include val("hr") {
+    &::before {
+      @extend %hr;
+    }
   }
-}
 
-$attr: "before";
-@include attr {
-  &::before {
-    content: '';
-  }
-}
-
-@include val("hr") {
-  &::before {
-    @extend %hr;
-  }
-}
-
-@include val("bullet") {
-  &::before {
-    content: '\2022';
-    padding-right: 0.5rem;
+  @include val("bullet") {
+    &::before {
+      content: '\2022';
+      padding-right: 0.5rem;
+    }
   }
 }
