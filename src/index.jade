@@ -8,6 +8,44 @@ header(am-HomepageHero)
     |  for CSS
 main
   section(am-Example)
+    h3
+      span(am-type="bold") Example:
+      |  Bootstrap Buttons
+    :markdown
+      Buttons are one of the strongest use-cases for AM. Here we've reproduced some of Bootstrap's button markup as an example. The problem with this (and other BEM-style button patterns) is that the markup is heavily convention-based: all buttons require a `btn` class *and* a specific button class, and it results in cluttered markup.
+
+      The AM version, in contrast, uses the attribute `am-Button` as an identifier, and allows straightforward, natural language as modifiers, e.g. `large`, `primary`, etc.
+    pre: code
+      span(am-Code='comment')= '<!-- Large primary button -->\n'
+      = '<a '
+      span(am-Code='removed')= 'class="btn btn-primary btn-lg"'
+      = '>Large primary button</a>\n'
+      = '<a '
+      span(am-Code='added')= 'am-Button="primary large"'
+      = '>Large primary button</a>\n'
+      span(am-Code='comment')= '\n<!-- Default button -->\n'
+      = '<a '
+      span(am-Code='removed')= 'class="btn btn-default"'
+      = '>Default button</a>\n'
+      = '<a '
+      span(am-Code='added')= 'am-Button'
+      = '>Default button</a>\n'
+      span(am-Code='comment')= '\n<!-- Small info button -->\n'
+      = '<a '
+      span(am-Code='removed')= 'class="btn btn-info btn-sm"'
+      = '>Small info button</a>\n'
+      = '<a '
+      span(am-Code='added')= 'am-Button="info small"'
+      = '>Small info button</a>\n'
+      span(am-Code='comment')= '\n<!-- Extra-small danger button -->\n'
+      = '<a '
+      span(am-Code='removed')= 'class="btn btn-danger btn-xs"'
+      = '>Extra-small danger button</a>\n'
+      = '<a '
+      span(am-Code='added')= 'am-Button="danger extra-small"'
+      = '>Extra-small danger button</a>'
+
+  section(am-Example)
     pre: code
       = '<div '
       span(am-Code='removed')= 'class="row"'
@@ -24,48 +62,3 @@ main
       = '>Responsive</div>'
       = '\n  </div>'
       = '\n</div>'
-
-  section(am-Example)
-    pre: code
-      span(am-Code='comment')= '<!-- Standard button -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-default"'
-      = ' '
-      span(am-Code='added')= 'am-Button'
-      = '>Default</a>\n'
-      span(am-Code='comment')= '<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-primary"'
-      = ' '
-      span(am-Code='added')= 'am-Button="primary"'
-      = '>Primary</a>\n'
-      span(am-Code='comment')= '<!-- Indicates a successful or positive action -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-success"'
-      = ' '
-      span(am-Code='added')= 'am-Button="success"'
-      = '>Success</a>\n'
-      span(am-Code='comment')= '<!-- Contextual button for informational alert messages -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-info"'
-      = ' '
-      span(am-Code='added')= 'am-Button="info"'
-      = '>Info</a>\n'
-      span(am-Code='comment')= '<!-- Indicates caution should be taken with this action -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-warning"'
-      = ' '
-      span(am-Code='added')= 'am-Button="warning"'
-      = '>Warning</a>\n'
-      span(am-Code='comment')= '<!-- Indicates a dangerous or potentially negative action -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-danger"'
-      = ' '
-      span(am-Code='added')= 'am-Button="danger"'
-      = '>Danger</a>\n'
-      span(am-Code='comment')= '<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->\n'
-      = '<a '
-      span(am-Code='removed')= 'class="btn btn-link"'
-      = ' '
-      span(am-Code='added')= 'am-Button="link"'
-      = '>Link</a>\n'

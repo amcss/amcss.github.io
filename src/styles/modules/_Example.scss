@@ -1,14 +1,17 @@
 [am-Example] {
   @include trait(layout, "max720 m2-auto p1-1");
 
-  > h2 {
+  > h3 {
     @include trait(layout, "m2-0");
-    @include trait(type, "h4 bold center");
+    @include trait(type, "h4 center");
   }
 
   > p {
     @include trait(layout, "m1-0");
     @include trait(type, "h6 lh1.4");
+  }
+  em {
+    @include trait(type, "italic");
   }
   pre {
     @include trait(layout, "max840 m1-auto");
