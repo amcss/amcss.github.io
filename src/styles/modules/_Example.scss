@@ -13,6 +13,9 @@
   em {
     @include trait(type, "italic");
   }
+  strong {
+    @include trait(type, "semibold");
+  }
   pre {
     @include trait(layout, "max840 m1-auto");
     code {
@@ -26,5 +29,8 @@
     @include trait(type, "mono lh1.2 small3 unbroken");
     @include trait(border, "simple");
     @include trait(layout, "p0.2 m0.2");
+  }
+  a {
+    @include trait(link, "inline");
   }
 }
