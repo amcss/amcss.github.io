@@ -9,7 +9,7 @@ header(am-HomepageHero)
 main
   section(am-Example)
     :markdown
-      Attribute Modules (AM) is a technique for using **attributes** and their **values** rather than classes for styling HTML elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable, maintainable HTML & CSS.
+      Attribute Modules (AM) is a technique for using HTML **attributes** and their **values** rather than classes for styling elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable and maintainable HTML & CSS.
 
       For an introduction to how AM was developed, see the [original blog post](http://glenmaddern.com/articles/introducing-am-css). The [specification itself](http://amcss.github.io/) is available on GitHub.
 
@@ -18,9 +18,7 @@ main
       span(am-type="bold") Example:
       |  Bootstrap Buttons
     :markdown
-      Buttons are one of the strongest use-cases for AM. Here we've reproduced some of Bootstrap's button markup as an example. The problem with this (and other BEM-style button patterns) is that the markup is heavily convention-based: all buttons require a `btn` class *and* a specific button class, and it results in cluttered markup.
-
-      The AM version, in contrast, uses the attribute `am-Button` as an identifier, and allows straightforward, natural language as modifiers, e.g. `large`, `primary`, etc.
+      Buttons are one of the strongest use-cases for AM. Here we've converted some of Bootstrap's button markup as an example.
     pre: code
       span(am-Code='comment')= '<!-- Large primary button -->\n'
       = '<a '
@@ -50,8 +48,13 @@ main
       = '<a '
       span(am-Code='added')= 'am-Button="danger extra-small"'
       = '>Extra-small danger button</a>'
+    :markdown
+      The original Bootstrap markup is heavily convention-based: all buttons require a `btn` class *and* a specific button class prefixed by `btn-`. It results in cluttered, repetitive markup.
 
-    p The CSS changes are quite straightforward:
+      The AM version, in contrast, uses the attribute `am-Button` as an identifier, and allows straightforward, natural, additive modifiers, e.g. `large`, `primary`, etc.
+
+    :markdown
+      The CSS changes are quite straightforward:
     pre: code
       span(am-Code='removed')= '.btn'
       = ' '
@@ -77,14 +80,13 @@ main
       span(am-type="bold") Example:
       |  Flexbox Grid
     :markdown
-      Using a grid system is commonplace and Flexbox Grid is one we're particularly fond of, but it shares some problems with all class-based grid systems. Because grid classes are used so frequently, it uses relatively *bare* css classes like `row` & `reverse`, but because columns need to be responsive, it eschews a global `col` class and instead defines `col-breakpoint-number` classes.
+      Using a grid system is commonplace and Flexbox Grid is one we're particularly fond of. Here we've converted some example markup into an AM style.
 
-      Converting this to AM-style, on the other hand, we can use an `am-Row` and `am-Column` module, and since each of those define a namespace, we can be free to use values of our choosing. It's also simple to use characters that normally wouldn't suit classes, so we can use a `breakpoint:number` syntax, which is arguably easier to understand at a glance.
     pre: code
       = '<div '
-      span(am-Code='removed')= 'class="row"'
+      span(am-Code='removed')= 'class="row reverse"'
       = ' '
-      span(am-Code='added')= 'am-Row'
+      span(am-Code='added')= 'am-Row~="reverse"'
       = '>\n  <div '
       span(am-Code='removed')= 'class="col-xs-12 col-sm-8"'
       = ' '
@@ -96,6 +98,11 @@ main
       = '>Responsive</div>'
       = '\n  </div>'
       = '\n</div>'
+
+    :markdown
+      The original markup shares some problems with all class-based grid systems. Because grid classes are used so frequently, it uses relatively *bare* css classes like `row` & `reverse`, but because columns need to be responsive, it eschews a global `col` class and instead defines <code>col-*breakpoint*-*number*</code> classes.
+
+      The AM markup, on the other hand, defines an `am-Row` and `am-Column` module, and since each of those define a namespace we can be free to use values of our choosing. These values can make use of a wider range of characters than is convenient with classes, so we can use a <code>*breakpoint*:*number*</code> syntax, which is arguably easier to understand at a glance.
 
   section(am-Example)
     h3
@@ -116,3 +123,8 @@ main
       = '\n</div>'
     :markdown
       Here, we're able to make use of the fact that values for `am-position` and `am-text` operate in *different namespaces*, so we can use the value `center` in both places without worrying about naming clashes.
+
+  section(am-Example)
+    h3 Call for feedback
+    :markdown
+      We'd love to hear suggestions for inclusions to the AM specification, by adding [an issue to our tracker](https://github.com/amcss/attribute-module-specification/issues) or contributing to an existing discussion. If you create an AM-style CSS library or framework, please [let us know](https://github.com/amcss/attribute-module-specification/issues/5).

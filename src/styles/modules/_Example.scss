@@ -1,12 +1,12 @@
 [am-Example] {
-  @include trait(layout, "max720 m2-auto p1-1");
+  @include trait(layout, "max720 p1 m0-auto mt2");
 
-  > h3 {
-    @include trait(layout, "m2-0");
+  h3 {
+    @include trait(layout, "mb2");
     @include trait(type, "h4 center");
   }
 
-  > p {
+  p {
     @include trait(layout, "m1-0");
     @include trait(type, "h6 lh1.4");
   }
@@ -17,7 +17,7 @@
     @include trait(type, "semibold");
   }
   pre {
-    @include trait(layout, "max840 m1-auto");
+    @include trait(layout, "max840 mt1 mb2");
     code {
       @include trait(type, "small3 lh1.8");
       @include trait(layout, "p0.5 m0");
