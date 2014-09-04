@@ -1,0 +1,15 @@
+[am-Contributors] {
+  @include trait(layout, 'p1');
+  @include trait(type, 'center lh1.6');
+  @include trait(before, 'hr');
+  @include trait(type, 'small1');
+
+  > h3 {
+    @include trait(layout, 'pt0.5');
+    @include trait(type, 'upcase small2');
+    color: $grey;
+  }
+  > ol {
+    @include trait(layout, 'pb0.5');
+  }
+}

@@ -9,7 +9,7 @@ header(am-HomepageHero)
 main
   section(am-Example)
     :markdown
-      Attribute Modules (AM) is a technique for using **attributes** and their **values** rather than classes for styling HTML elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable, maintainable HTML & CSS code.
+      Attribute Modules (AM) is a technique for using **attributes** and their **values** rather than classes for styling HTML elements. In doing so, each attribute effectively declares a separate namespace for encapsulating style information, resulting in more readable, maintainable HTML & CSS.
 
       For an introduction to how AM was developed, see the [original blog post](http://glenmaddern.com/articles/introducing-am-css). The [specification itself](http://amcss.github.io/) is available on GitHub.
 
@@ -51,6 +51,27 @@ main
       span(am-Code='added')= 'am-Button="danger extra-small"'
       = '>Extra-small danger button</a>'
 
+    p The CSS changes are quite straightforward:
+    pre: code
+      span(am-Code='removed')= '.btn'
+      = ' '
+      span(am-Code='added')= '[am-Button]'
+      = ' { '
+      span(am-Code='comment')= '/* Default button styles */'
+      = ' }\n'
+      span(am-Code='removed')= '.btn-primary'
+      = ' '
+      span(am-Code='added')= '[am-Button~="primary"]'
+      = ' { '
+      span(am-Code='comment')= '/* Primary colours */'
+      = ' }\n'
+      span(am-Code='removed')= '.btn-large'
+      = ' '
+      span(am-Code='added')= '[am-Button~="large"]'
+      = ' { '
+      span(am-Code='comment')= '/* Large sizing */'
+      = ' }\n'
+
   section(am-Example)
     h3
       span(am-type="bold") Example:
@@ -75,3 +96,23 @@ main
       = '>Responsive</div>'
       = '\n  </div>'
       = '\n</div>'
+
+  section(am-Example)
+    h3
+      span(am-type="bold") Example:
+      |  Traits
+    :markdown
+      While AM can be used as a drop-in for BEM-style class naming, you can also consider a module defining a more general *namespace* for grouping related styles. Similar to utility classes in Suit CSS, these can be thought of as reusable style **traits**, that can be applied on or within components.
+    pre: code
+      = '<div '
+      span(am-Code='removed')= 'class="u-posAbsoluteCenter"'
+      = ' '
+      span(am-Code='added')= 'am-position="absolute center"'
+      = '>\n  <div '
+      span(am-Code='removed')= 'class="u-textTruncate u-textCenter"'
+      = ' '
+      span(am-Code='added')= 'am-text="truncate center"'
+      = '>\n    Very centered text.\n  </div>'
+      = '\n</div>'
+    :markdown
+      Here, we're able to make use of the fact that values for `am-position` and `am-text` operate in *different namespaces*, so we can use the value `center` in both places without worrying about naming clashes.
