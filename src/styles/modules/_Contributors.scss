@@ -1,15 +1,25 @@
 [am-Contributors] {
-  @include trait(layout, 'p1');
-  @include trait(type, 'center lh1.6');
-  @include trait(before, 'hr');
-  @include trait(type, 'small1');
+  @extend %small1;
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  &::before {
+    content: '';
+    color: inherit;
+    display: block;
+    width: 50%;
+    margin: 1rem auto;
+    border-top: 1px solid;
+    opacity: 0.2;
+  }
 
   > h3 {
-    @include trait(layout, 'pt0.5');
-    @include trait(type, 'upcase small2');
+    @extend %small2;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
     color: $grey;
   }
   > ol {
-    @include trait(layout, 'pb0.5');
+    padding-bottom: 0.5rem;
   }
 }

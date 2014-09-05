@@ -1,6 +1,27 @@
 [am-HomepageHero] {
-  @include trait(layout, "p4");
-  @include trait(type, "center");
-  @include trait(background, "gradient");
-  @include trait(color, "white");
+  padding: 4rem;
+  text-align: center;
+  background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
+  color: $white;
+  font-weight: 300;
+
+  h1 {
+    @extend %h1;
+    &::before {
+      @extend %h0;
+      content: '[';
+    }
+    &::after {
+      @extend %h0;
+      content: ']';
+    }
+  }
+  h2 {
+    @extend %h3;
+    padding-top: 2rem;
+    font-style: italic;
+    > span {
+      font-weight: 400;
+    }
+  }
 }

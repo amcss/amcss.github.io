@@ -1,27 +1,15 @@
 /* Reset */
 @import "reset";
 
-/* Set up AM mixins */
-$breakpoints: "small", "medium", "large";
-$prefix: "am-";
-@import 'mixins';
+/* Variables */
+@import 'colors';
+@import 'type';
 
-/* Declare traits */
-@import 'traits/color';
-@import 'traits/layout';
-@import 'traits/flex';
-@import 'traits/type';
-@import 'traits/link';
-@import 'traits/after';
-@import 'traits/border';
-@import 'traits/background';
-@import 'traits/size';
-
-/* Assemble Modules */
+/* Modules */
 @import 'modules/HomepageHero';
 @import 'modules/Example';
 @import 'modules/Code';
 @import 'modules/Contributors';
 
-/* Add global styles */
+/* Set global styles */
 @import 'globals';

@@ -1,36 +1,62 @@
 [am-Example] {
-  @include trait(layout, "max720 p1 m0-auto mt2");
+  max-width: 720px;
+  padding: 1rem;
+  margin: 2rem auto 0;
 
   h3 {
-    @include trait(layout, "mb2");
-    @include trait(type, "h4 center");
+    @extend %h4;
+    margin-bottom: 2rem;
+    text-align: center;
+    strong {
+      font-weight: 700;
+    }
   }
 
   p {
-    @include trait(layout, "m1-0");
-    @include trait(type, "h6 lh1.4");
+    @extend %h6;
+    margin: 1rem 0;
+    line-height: 1.4;
   }
   em {
-    @include trait(type, "italic");
+    font-style: italic;
   }
   strong {
-    @include trait(type, "semibold");
+    font-weight: 600;
   }
   pre {
-    @include trait(layout, "max840 mt1 mb2");
+    margin: 1rem 0 2rem;
     code {
-      @include trait(type, "small3 lh1.8");
-      @include trait(layout, "p0.5 m0");
-      @include trait(border, "none");
+      @extend %small3;
+      line-height: 1.8;
+      padding: 0.5rem;
+      margin: 0;
+      box-shadow: none;
       color: $grey;
+      display: block;
     }
   }
   code {
-    @include trait(type, "mono lh1.2 small3 unbroken");
-    @include trait(border, "simple");
-    @include trait(layout, "p0.2 m0.2");
+    @extend %mono;
+    @extend %small3;
+    line-height: 1.2;
+    white-space: pre;
+    box-shadow: 0 0 0 1px #ddd;
+    padding: 0.2rem;
+    margin: 0.2rem;
   }
   a {
-    @include trait(link, "inline");
+    transition: color 0.1s;
+    &, &:hover, &:visited {
+      color: hsl(0, 50%, 40%);
+      text-decoration: none;
+    }
+    &:hover {
+      color: hsl(0, 50%, 50%);
+    }
+    &:active {
+      transition: none;
+      color: hsl(0, 50%, 50%);
+      text-decoration: underline;
+    }
   }
 }
