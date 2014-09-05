@@ -21,5 +21,19 @@
   }
   > ol {
     padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin: 1rem 2rem;
+      display: block;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #eee, 0 0 0 7px white, 0 0 0 8px #ddd;
+    }
+  }
+  > ul {
+    padding-bottom: 1rem;
   }
 }
