@@ -33,6 +33,8 @@
       box-shadow: none;
       color: $grey;
       display: block;
+      max-width: 100%;
+      overflow: auto;
     }
   }
   code {

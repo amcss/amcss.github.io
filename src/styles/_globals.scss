@@ -3,6 +3,11 @@
   font-size: 16px;
   min-height: 100%;
 }
+@media screen and (min-width: 960px) {
+  :root {
+    font-size: 20px;
+  }
+}
 
 body {
   min-height: 100%;

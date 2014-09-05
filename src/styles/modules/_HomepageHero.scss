@@ -1,5 +1,5 @@
 [am-HomepageHero] {
-  padding: 4rem;
+  padding: 4rem 1rem;
   text-align: center;
   background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
   color: $white;
@@ -22,6 +22,18 @@
     font-style: italic;
     > span {
       font-weight: 400;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    h1 {
+      @extend %h2;
+      &::before, &::after {
+        @extend %h1;
+      }
+    }
+    h2 {
+      @extend %h4;
     }
   }
 }
