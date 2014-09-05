@@ -15,3 +15,19 @@ body {
   background: $white;
   color: $black;
 }
+
+a {
+  transition: color 0.1s;
+  &, &:hover, &:visited {
+    color: hsl(0, 50%, 40%);
+    text-decoration: none;
+  }
+  &:hover {
+    color: hsl(0, 50%, 50%);
+  }
+  &:active {
+    transition: none;
+    color: hsl(0, 50%, 50%);
+    text-decoration: underline;
+  }
+}

@@ -3,10 +3,14 @@
   padding: 1rem;
   margin: 2rem auto 0;
 
+  h2 {
+    @extend %h4;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
   h3 {
     @extend %h4;
     margin-bottom: 2rem;
-    text-align: center;
     line-height: 1.4;
     strong {
       font-weight: 700;
@@ -47,19 +51,13 @@
     padding: 0.2rem;
     margin: 0.2rem;
   }
-  a {
-    transition: color 0.1s;
-    &, &:hover, &:visited {
-      color: hsl(0, 50%, 40%);
-      text-decoration: none;
+  ul {
+    line-height: 1.4;
+    li {
+      padding-top: 1rem;
     }
-    &:hover {
-      color: hsl(0, 50%, 50%);
-    }
-    &:active {
-      transition: none;
-      color: hsl(0, 50%, 50%);
-      text-decoration: underline;
+    strong {
+      @extend %h5;
     }
   }
 }

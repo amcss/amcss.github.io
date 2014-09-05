@@ -77,7 +77,7 @@ main
       strong Example:
       |  Flexbox Grid
     :markdown
-      Using a grid system is commonplace and Flexbox Grid is one we're particularly fond of. Here we've converted some example markup into an AM style.
+      Using a grid system is commonplace and [Flexbox Grid](http://flexboxgrid.com/) is one we're particularly fond of. Here we've converted some example markup into an AM style.
 
     pre: code
       = '<div '
@@ -122,6 +122,31 @@ main
       Here, we're able to make use of the fact that values for `am-position` and `am-text` operate in *different namespaces*, so we can use the value `center` in both places without worrying about naming clashes.
 
   section(am-Example)
-    h3 Call for feedback
+    h2 Built with AM
+    :markdown
+      - **[am-Grid](https://github.com/benschwarz/am-grid)**<br>
+        A grid system, inspired by Flexbox Grid. [View source](https://github.com/benschwarz/am-grid/blob/master/src/grid.css)
+      - **[This website](http://amcss.github.io/styles/main.css)**<br>
+        A simple example of AM in-use, broken up into [four simple modules](https://github.com/amcss/amcss.github.io/tree/development/src/styles/modules).
+
+  section(am-Example)
+    h2 Call for feedback
     :markdown
       We'd love to hear suggestions for inclusions to the AM specification, by adding [an issue to our tracker](https://github.com/amcss/attribute-module-specification/issues) or contributing to an existing discussion. If you create an AM-style CSS library or framework, please [let us know](https://github.com/amcss/attribute-module-specification/issues/5).
+
+footer(am-Contributors)
+  h3 Developed by
+  ol
+    li
+      a(href='https://twitter.com/glenmaddern' target='_blank')
+        img(src='/images/glen.jpg')
+        | Glen Maddern
+    li
+      a(href='https://twitter.com/benschwarz' target='_blank')
+        img(src='/images/ben.jpg')
+        | Ben Schwarz
+  h3 With thanks to
+  ul
+    li Ben Smithett
+    li Florent Verschelde
+    li Robbie Manson
