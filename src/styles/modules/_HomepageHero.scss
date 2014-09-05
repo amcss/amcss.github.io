@@ -1,18 +1,27 @@
 [am-HomepageHero] {
   position: relative;
-  padding: 4rem 1rem 2rem;
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   text-shadow: 0 1px 0 rgba(black, 0.2);
+  overflow: hidden;
   &::before {
     content: '';
     position: absolute;
-    top: -20%;
-    left: -20%;
-    height: 120%;
-    width: 140%;
-    background: linear-gradient(90deg, #965ddc 0%, lighten(#965ddc, 10%) 100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 120%;
     z-index: -1;
+    transform-origin: 0 100%;
     transform: rotate(-2deg) translateZ(0);
+    background: linear-gradient(90deg, #965ddc 0%, lighten(#965ddc, 10%) 100%);
+    @for $i from 16 to 54 {
+      $purps: hsl(3 * $i + 90, 57%, 60%);
+      @media screen and (min-width: $i * 20px) and (max-width: $i * 20px + 19px) {
+        background: linear-gradient(90deg, $purps 0%, lighten($purps, 10%) 100%);
+      }
+    }
   }
   color: $white;
   font-weight: 300;
