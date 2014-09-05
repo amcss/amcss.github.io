@@ -68,26 +68,144 @@ table {
 /* Modules */
 [am-HomepageHero] {
   position: relative;
-  padding: 4rem 1rem 2rem;
+  padding: 4rem 1rem;
+  margin-bottom: 2rem;
   text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
   color: #fdfdfb;
   font-weight: 300; }
   [am-HomepageHero]::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    height: 150%;
-    width: 200%;
-    background: linear-gradient(45deg, #965ddc 0%, #b087e5 100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 120%;
     z-index: -1;
-    transform: rotate(-4deg); }
+    transform-origin: 0 100%;
+    transform: rotate(-2deg) translateZ(0);
+    background: linear-gradient(90deg, #965ddc 0%, #b087e5 100%); }
+    @media screen and (min-width: 320px) and (max-width: 339px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd382 0%, #87dea1 100%); } }
+    @media screen and (min-width: 340px) and (max-width: 359px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd388 0%, #87dea4 100%); } }
+    @media screen and (min-width: 360px) and (max-width: 379px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd38d 0%, #87deaa 100%); } }
+    @media screen and (min-width: 380px) and (max-width: 399px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd393 0%, #87deae 100%); } }
+    @media screen and (min-width: 400px) and (max-width: 419px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd399 0%, #87deb3 100%); } }
+    @media screen and (min-width: 420px) and (max-width: 439px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd39f 0%, #87deb5 100%); } }
+    @media screen and (min-width: 440px) and (max-width: 459px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3a5 0%, #87debb 100%); } }
+    @media screen and (min-width: 460px) and (max-width: 479px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3aa 0%, #87dec0 100%); } }
+    @media screen and (min-width: 480px) and (max-width: 499px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3b0 0%, #87dec4 100%); } }
+    @media screen and (min-width: 500px) and (max-width: 519px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3b6 0%, #87dec8 100%); } }
+    @media screen and (min-width: 520px) and (max-width: 539px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3bc 0%, #87decd 100%); } }
+    @media screen and (min-width: 540px) and (max-width: 559px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3c2 0%, #87ded1 100%); } }
+    @media screen and (min-width: 560px) and (max-width: 579px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3c8 0%, #87ded5 100%); } }
+    @media screen and (min-width: 580px) and (max-width: 599px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3cd 0%, #87deda 100%); } }
+    @media screen and (min-width: 600px) and (max-width: 619px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fd3d3 0%, #87dede 100%); } }
+    @media screen and (min-width: 620px) and (max-width: 639px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fcdd3 0%, #87dbde 100%); } }
+    @media screen and (min-width: 640px) and (max-width: 659px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fc8d3 0%, #87d5de 100%); } }
+    @media screen and (min-width: 660px) and (max-width: 679px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fc2d3 0%, #87d2de 100%); } }
+    @media screen and (min-width: 680px) and (max-width: 699px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fbcd3 0%, #87cede 100%); } }
+    @media screen and (min-width: 700px) and (max-width: 719px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fb6d3 0%, #87cade 100%); } }
+    @media screen and (min-width: 720px) and (max-width: 739px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fb0d3 0%, #87c4de 100%); } }
+    @media screen and (min-width: 740px) and (max-width: 759px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5faad3 0%, #87c0de 100%); } }
+    @media screen and (min-width: 760px) and (max-width: 779px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5fa5d3 0%, #87bbde 100%); } }
+    @media screen and (min-width: 780px) and (max-width: 799px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f9fd3 0%, #87b8de 100%); } }
+    @media screen and (min-width: 800px) and (max-width: 819px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f99d3 0%, #87b4de 100%); } }
+    @media screen and (min-width: 820px) and (max-width: 839px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f93d3 0%, #87b0de 100%); } }
+    @media screen and (min-width: 840px) and (max-width: 859px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f8dd3 0%, #87abde 100%); } }
+    @media screen and (min-width: 860px) and (max-width: 879px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f88d3 0%, #87a7de 100%); } }
+    @media screen and (min-width: 880px) and (max-width: 899px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f82d3 0%, #87a3de 100%); } }
+    @media screen and (min-width: 900px) and (max-width: 919px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f7cd3 0%, #879ede 100%); } }
+    @media screen and (min-width: 920px) and (max-width: 939px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f76d3 0%, #8798de 100%); } }
+    @media screen and (min-width: 940px) and (max-width: 959px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f70d3 0%, #8794de 100%); } }
+    @media screen and (min-width: 960px) and (max-width: 979px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f6ad3 0%, #8791de 100%); } }
+    @media screen and (min-width: 980px) and (max-width: 999px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f65d3 0%, #878dde 100%); } }
+    @media screen and (min-width: 1000px) and (max-width: 1019px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #5f5fd3 0%, #8787de 100%); } }
+    @media screen and (min-width: 1020px) and (max-width: 1039px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #655fd3 0%, #8b87de 100%); } }
+    @media screen and (min-width: 1040px) and (max-width: 1059px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #6a5fd3 0%, #9087de 100%); } }
+    @media screen and (min-width: 1060px) and (max-width: 1079px) {
+      [am-HomepageHero]::before {
+        background: linear-gradient(90deg, #705fd3 0%, #9487de 100%); } }
   [am-HomepageHero] h1::before {
     content: '['; }
   [am-HomepageHero] h1::after {
     content: ']'; }
   [am-HomepageHero] h2 {
-    transform: rotate(-4deg);
+    transform: rotate(-2deg);
     padding-top: 3rem;
     font-style: italic; }
     [am-HomepageHero] h2 > span {
@@ -98,14 +216,10 @@ table {
   max-width: 720px;
   padding: 1rem;
   margin: 2rem auto 0; }
-  [am-Example] h2 {
-    font-weight: 700;
+  [am-Example] h2, [am-Example] h3 {
     margin-bottom: 2rem; }
-  [am-Example] h3 {
-    margin-bottom: 2rem;
-    line-height: 1.4; }
-    [am-Example] h3 strong {
-      font-weight: 700; }
+  [am-Example] h2, [am-Example] strong {
+    font-weight: 700; }
   [am-Example] p {
     margin: 1rem 0;
     line-height: 1.4; }
@@ -131,9 +245,10 @@ table {
     padding: 0.2rem;
     margin: 0.2rem; }
   [am-Example] ul {
+    margin-bottom: 1rem;
     line-height: 1.4; }
     [am-Example] ul li {
-      padding-top: 1rem; }
+      margin-bottom: 1rem; }
 
 [am-Code] {
   padding: 2px;
