@@ -67,17 +67,28 @@ table {
 
 /* Modules */
 [am-HomepageHero] {
-  padding: 4rem 1rem;
+  position: relative;
+  padding: 4rem 1rem 2rem;
   text-align: center;
-  background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
   color: #fdfdfb;
   font-weight: 300; }
+  [am-HomepageHero]::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 150%;
+    width: 200%;
+    background: linear-gradient(45deg, #965ddc 0%, #b087e5 100%);
+    z-index: -1;
+    transform: rotate(-4deg); }
   [am-HomepageHero] h1::before {
     content: '['; }
   [am-HomepageHero] h1::after {
     content: ']'; }
   [am-HomepageHero] h2 {
-    padding-top: 2rem;
+    transform: rotate(-4deg);
+    padding-top: 3rem;
     font-style: italic; }
     [am-HomepageHero] h2 > span {
       font-weight: 400; }
