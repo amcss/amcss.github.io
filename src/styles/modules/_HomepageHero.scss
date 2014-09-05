@@ -1,7 +1,18 @@
 [am-HomepageHero] {
-  padding: 4rem 1rem;
+  position: relative;
+  padding: 4rem 1rem 2rem;
   text-align: center;
-  background: linear-gradient(45deg, #2b782b 0%, #85c543 100%);
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    height: 150%;
+    width: 200%;
+    background: linear-gradient(45deg, #965ddc 0%, lighten(#965ddc, 10%) 100%);
+    z-index: -1;
+    transform: rotate(-4deg);
+  }
   color: $white;
   font-weight: 300;
 
@@ -17,8 +28,9 @@
     }
   }
   h2 {
+    transform: rotate(-4deg);
     @extend %h3;
-    padding-top: 2rem;
+    padding-top: 3rem;
     font-style: italic;
     > span {
       font-weight: 400;
