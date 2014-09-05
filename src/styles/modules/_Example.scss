@@ -3,18 +3,12 @@
   padding: 1rem;
   margin: 2rem auto 0;
 
-  h2 {
+  h2, h3 {
     @extend %h4;
-    font-weight: 700;
     margin-bottom: 2rem;
   }
-  h3 {
-    @extend %h4;
-    margin-bottom: 2rem;
-    line-height: 1.4;
-    strong {
-      font-weight: 700;
-    }
+  h2, strong {
+    font-weight: 700;
   }
 
   p {
@@ -52,9 +46,10 @@
     margin: 0.2rem;
   }
   ul {
+    margin-bottom: 1rem;
     line-height: 1.4;
     li {
-      padding-top: 1rem;
+      margin-bottom: 1rem;
     }
     strong {
       @extend %h5;
