@@ -12,7 +12,6 @@ html(lang="en")
   body
     //!= partial("_shared/nav")
     != yield
-    != partial("_partials/footer")
     //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow.min.css")
     //script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js")
     //script hljs.initHighlightingOnLoad();
@@ -23,3 +22,7 @@ html(lang="en")
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
           ga('create', 'UA-32408977-4', 'auto');
       ga('send', 'pageview');
+    script.
+      [].forEach.call(document.querySelectorAll('[am-Example] a[href^=http]'), function(el) {
+        el.setAttribute('target', '_blank');
+      })
